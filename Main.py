@@ -10,7 +10,7 @@ URL = input("Enter the URL of the webpage: ")
 Filename = input("What do you want the Excel worksheet's file name to be? ")
 Headers = {
     'Content-Type': 'application/json',
-    'Authorization': '{INSERT YOUR API KEY HERE}'
+    'Authorization': 'Bearer {INSERT YOUR API KEY HERE}'
 }
 Request_Delay = (2, 15)
 Max_Match_Results = 10
@@ -261,3 +261,4 @@ if __name__ == "__main__":
     edata = get_teams(URL)
     tdata = get_team_data(edata)
     save_teams_to_excel(edata, tdata, Filename)
+
